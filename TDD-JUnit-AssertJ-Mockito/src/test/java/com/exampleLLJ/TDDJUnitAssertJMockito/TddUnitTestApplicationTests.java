@@ -42,7 +42,8 @@ class TddUnitTestApplicationTests {
 	@Test
 	void postOneBand() throws Exception {
 		String band = "{\"bandId\": 4, \"name\": \"ColdPlay\", \"price\": 50000}";
-		mockMvc.perform(post("/bands").contentType(MediaType.APPLICATION_JSON).content(band))
+		mockMvc.perform(post("/bands")
+						.contentType(MediaType.APPLICATION_JSON).content(band))
 				.andExpect(status().isOk());
 	}
 
@@ -65,6 +66,7 @@ class TddUnitTestApplicationTests {
 		assertThat(5.23).isCloseTo(5, Percentage.withPercentage(5));
 	}
 
+	// 可以用于单元测试的Mockito框架
 	@Test
 	void testMockClass() {
 		//模拟创建一个List对象
