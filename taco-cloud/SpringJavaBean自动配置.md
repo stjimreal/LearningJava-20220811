@@ -17,3 +17,21 @@
 1. 在其中一个不使用Spring Boot自动配置的 main 启动类配置文件 .xml 中限定组件扫描位置，区分DataSource位置
 2. 在另一个配置了@SpringBootApplication的main启动类中装配另一个类时，标记对方为 @AutoConfiguration
 
+
+## Spring Data 包括哪些配置？
+
+### 数据源相关 DataSource
+
+DataSourceAutoConfiguration
+
+#### 配置多数据源的方法
+
+`@ConfigurationProperties`构建`DataSourceProperty`对象来构建多个DataSource
+
+### 事务管理相关 TransactionManager/TransactionTemplate
+
+DataSourceTransactionManagerAutoConfiguration
+
+### 操作相关 JdbcTemplate
+
+JdbcTemplateAutoConfiguration
