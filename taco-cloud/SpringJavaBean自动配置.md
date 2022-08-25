@@ -8,7 +8,7 @@
 
 ## SpringBootApplication
 
-==> SpringBootConfiguration + EnableAutoConfiguration + ComponentScan
+> ==> SpringBootConfiguration + EnableAutoConfiguration + ComponentScan
 
 ## 由两个 DataSource Bean 造成的循环依赖是什么？是如何解除的？
 
